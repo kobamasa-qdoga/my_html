@@ -49,7 +49,7 @@ get '/contact' do
 end
 
 get '/gallery' do
-  @images = ImagePath.paginate(page: params[:page], per_page: 10)
+  @images = ImagePath.all
   erb :gallery
 end
 get '/admin_login' do
