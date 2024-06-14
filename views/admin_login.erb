@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Admin Login</title>
+<meta name="viewport" content="width=device-width,initial-scale=0.9">
+
+<link rel="stylesheet" href="/default.css">
+<link rel="stylesheet" type="text/css" href="/admin_style.css">
+
+</head>
+
+<body>
+  <div id="headerArea"></div>
+  <h1>Admin Login</h1>
+  <form action="/admin_login" method="post">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+    <button type="submit">Login</button>
+  </form>
+  <% if flash[:error] %>
+    <p style="color:red;"><%= flash[:error] %></p>
+  <% end %>
+</body>
+</html>

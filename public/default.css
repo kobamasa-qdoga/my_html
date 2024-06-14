@@ -1,0 +1,61 @@
+@font-face{
+    font-family:"Mamelon3";/*マメロンのウエイト3をインポート*/
+    src: url("./font/Mamelon-3HiRegular.woff2") format("woff2"),
+         url("./font/Mamelon-3HiRegular.eot") format("eot");
+}
+
+body{
+    font-family: "Mamelon3",sans-serif;/*マメロン,無ければゴシック体*/
+    color: rgb(64,32,32);
+    text-align: center;
+    padding:0;
+    margin:0;
+    overflow-x: hidden; /* 水平方向のスクロールを無効化 */
+}
+
+/*ヘッダ*/
+.header{
+    color: rgb(64,32,32);
+}
+
+#headerArea{
+    position: sticky;
+    top:0;
+    /*height: 56px;*/
+}
+
+/*フッタ*/
+.footer{
+    background-color: rgb(192, 168, 144);
+    width: 80%;
+    padding-left:10%;
+    padding-top:10px;
+    padding-bottom:10px;
+    display: flex;
+    color: white;
+}
+
+
+.footerlist-title {
+    font-size:large;
+    color:inherit;
+    text-decoration: none;
+  }
+
+  .footerlist-element {
+    color:inherit;
+    text-decoration: none;
+    list-style: none;
+    padding:0px;
+  }
+
+.btn-style-link {
+    /*aタグのstyle要素に加えることでボタン風に
+    できる*/
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: lightslategray;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }

@@ -1,0 +1,7 @@
+ImagePathDB:
+        adapter: mysql2
+        database: ImagePathDB
+        username: kobamasa
+        password: 0058Masa
+        host: 192.168.40.60
+        port: 3306

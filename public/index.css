@@ -1,0 +1,101 @@
+.news-area {
+    width:70%;
+    margin: 0 auto;
+    text-align: left;
+}
+@media only screen and (min-width: 768px) {
+    .news-area {
+      width: 70%;
+    }
+}
+.news_head {
+  color: rgb(212, 200, 192);
+}
+@media (max-width: 768px){
+  .news{
+    font-size: 0.7em;
+  }
+  .news_head{
+    margin-top: 35%;
+  }
+}
+
+/*profileから移植。長さ色は取りあえず*/
+.line {
+  border-top: 2px dashed;
+  color: rgb(238, 220, 179);
+  margin-top:10px;
+  margin-bottom:10px;
+}
+/*以下home1-popup*/
+
+
+/* 画像をヘッダーより背面に表示 */
+.fade-in-image {
+    background-color: lightgray;
+    opacity: 0.3;
+    transition: opacity 2s ease-in-out;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 100%;
+    height: auto;
+    
+  }
+@media (max-width: 768px){
+  .fade-in-image{
+    transform: scale(1.8); /* 画像を150%に拡大 */
+    /*transform-origin: center; /* 拡大の基点を中心に設定 */
+    transform-origin: 10% 5%; /* 拡大の基点を右に60%、下に60%の位置に設定 */
+     
+  }
+  .image-container {
+    /* position: relative; */
+    width: 60%;
+    height: 100%;
+  }
+}
+  
+  .fade-in-image.loaded {
+    opacity: 1;
+  }
+  
+  
+  /*画像に隠れる範囲*/
+  /*
+  #popup-area {
+    height: 800px;
+  }
+  */
+  /*タイトル部分。画像に隠れないようにrelativeでz-indexを２にしている。*/
+  /*
+    h1 {
+      position: relative;
+      z-index: 2;
+      margin-left: 45%;/*これが真ん中
+    } 
+    */
+   /*キラキラの主要部、未完成
+    .glitter-wrapper {
+   
+      display: inline-block;
+    }
+    
+    .glitter {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background: url('toppage_sample.png') repeat;
+      z-index: 1;
+      opacity: 1;
+      pointer-events: none;
+      animation: glitter-animation 10s infinite;
+    }
+    
+    @keyframes glitter-animation {
+      0% { transform: translate(-50%, -50%) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translate(-50%, -50%) rotate(360deg); opacity: 0; }
+    }
+    */

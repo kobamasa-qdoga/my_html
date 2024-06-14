@@ -1,0 +1,20 @@
+.image-item img {
+    width: 25%; /* 画面幅の25%に設定 */
+    height: auto; /* 高さは自動調整 */
+}
+li button {
+    background: #dc3545;
+}
+
+li button:hover {
+    background: #c82333;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

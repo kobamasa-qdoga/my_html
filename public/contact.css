@@ -1,0 +1,37 @@
+.text-section{
+    color: rgb(64,32,32);
+    text-align: left;
+    padding:0;
+    margin:0;   
+    margin-top: 8%; 
+}
+@media (max-width: 768px){
+    .text-section{
+        color: rgb(64,32,32);
+        text-align: left;
+        padding:0;
+        margin:0;   
+        margin-top: 20%; 
+        
+        font-size: 0.7em;
+    }
+    
+}
+.btn-style-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: rgb(64,32,32);
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0.25rem;
+    margin-top: 7%;
+  }
+/* .text-section{
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
+/*    width: 100%; /* 要素の幅を親要素に合わせて100%にする */
+/*    max-width: 700px; /* 最大幅を設定し、それ以上大きくならないようにする */
+/*    margin: 0 auto; /* 左右のマージンを自動にして中央寄せ */
+/*}*/ 
+
+

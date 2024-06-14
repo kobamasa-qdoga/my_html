@@ -1,0 +1,30 @@
+.header{
+    background-color: rgb(212, 200, 192);
+    color: rgb(64,32,32);
+    font-size: large;
+    /*position: fixed;*/
+    top:0;
+    width: 100%;
+    padding:10px;/*余白により高さを取る*/
+
+    z-index: 255;
+}
+
+.link-area{
+    display:flex;
+    justify-content:space-around;
+    margin:0 auto;
+    width:85%;
+}
+/* 画面幅660px以上の場合*/
+@media only screen and (min-width: 700px) {
+    .link-area {
+      width: 600px;
+    }
+  }
+
+.divide-line{
+    background-color:rgb(64,32,32);
+    width: 1px;
+    height: 2em;
+}

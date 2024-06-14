@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Gallery</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+<meta name="viewport" content="width=device-width,initial-scale=0.9">
+
+<!-- レイアウトを制御CSSを読み込み -->
+<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" type="text/css" href="gallery_style.css">
+
+<!-- ヘッダとフッダ用のscriptをロード -->
+
+<!-- アイコン(ファビコン) 本番は.icoファイルを利用予定だが代用画像を利用 -->
+<link rel="shortcut icon" href="fabicon.png">
+
+<!-- jQuery(jsライブラリ)のロード -->
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="gallery_script.js"></script>
+<script src="header.js"defer></script>
+<script src="putHeader.js"></script>
+
+</head>
+
+<body>
+  <!--ヘッダ部分-->
+  <div id="headerArea"></div>
+  <script>putHeader()</script>
+  <!-- ヘッダ終了 -->
+  <div id="overlay"></div>
+
+  
+  <div class="image-list">
+    <ul class="gallery"> 
+      <!-- <li class="image-item"><img src="img_file/1_low.jpg" loading="lazy" alt="Image 1"></li>
+      <li class="image-item"><img src="img_file/2_low.jpg" loading="lazy" alt="Image 2"></li>
+      <li class="image-item"><img src="img_file/3_low.jpg" loading="lazy" alt="Image 3"></li>
+      <li class="image-item"><img src="img_file/4_low.jpg" loading="lazy" alt="Image 4"></li>
+      <li class="image-item"><img src="img_file/5_low.jpg" loading="lazy" alt="Image 5"></li>
+      <li class="image-item"><img src="img_file/6_low.jpg" loading="lazy" alt="Image 6"></li>
+      <li class="image-item"><img src="img_file/7_low.jpg" loading="lazy" alt="Image 7"></li>
+      <li class="image-item"><img src="img_file/8_low.jpg" loading="lazy" alt="Image 8"></li>
+      <li class="image-item"><img src="img_file/9_low.jpg" loading="lazy" alt="Image 9"></li>
+      <li class="image-item"><img src="img_file/10_low.jpg" loading="lazy" alt="Image 10"></li>
+      <li class="image-item"><img src="img_file/11_low.jpg" loading="lazy" alt="Image 11"></li>
+      <li class="image-item"><img src="img_file/12_low.jpg" loading="lazy" alt="Image 12"></li>
+      <li class="image-item"><img src="img_file/13_low.jpg" loading="lazy" alt="Image 13"></li>
+      <li class="image-item"><img src="img_file/14_low.jpg" loading="lazy" alt="Image 14"></li>
+      <li class="image-item"><img src="img_file/15_low.jpg" loading="lazy" alt="Image 15"></li>
+      <li class="image-item"><img src="img_file/16_low.jpg" loading="lazy" alt="Image 16"></li> -->
+    <% @images.each do |image| %>
+      <li class="image-item">
+        <img src="<%= image['path'] %>" loading="lazy" alt="Image">
+      </li>
+    <% end %>
+    </ul>
+  </div>
+  
+  <div id="selected-image-container">
+    <img id="selected-image" src="" alt="Selected Image">
+    <div id="image-info">
+      <h2 id="title"></h2>
+      <p id="text"></p>
+    </div>
+  </div>
+  <!-- 選択された画像の詳細表示終了 -->
+  
+  
+  <!-- スクリプト -->
+</body>
+</html>

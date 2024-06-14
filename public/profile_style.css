@@ -1,0 +1,164 @@
+/*これはロゴ画像と横のテキストの表示を大まかに決めてる部分*/
+.logo-text-images-wrapper {
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  align-items: center; /* 子要素を中央揃え */
+  width: 100%;
+}
+
+.logo-and-text {
+  /* 必要に応じてスタイルを追加 */
+  align-items: center;
+  display: flex;
+  width: 100%; 
+  margin-top: 3%;
+}
+
+
+.text-section{
+  color: rgb(64,32,32);
+  text-align: left;
+  padding:0;
+  margin: 0;
+  width: 100%; /* コンテナ全体の幅を使用 */
+}
+.btn-style-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: rgb(64,32,32);
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+
+/*ロゴの表示位置を指定している。*/
+.logo-img {
+  /*margin-left: 33%;/*大体左上だから横から15％にした*/
+  margin-right: 2%;
+  /* margin-top: 5%; */
+  /*width: 250px; /* 画像の幅を100pxに設定 */
+  height: auto; /* 高さを自動調整 */
+  align-self: flex-start; /* ロゴをコンテナの左端に揃える */
+}
+@media (min-width: 769px) {
+  .logo-img {
+    margin-left: 33%;
+    width: 15%;
+    margin-top: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .logo-img {
+    margin-left: 5%;
+    width: 200px;
+    margin-top: 20%;
+  }
+}
+.logo-text {
+  margin-left: 30%; /* ロゴ画像とテキストの間隔 ここで並行移動は調整できる*/
+  font-size: 16px; /* テキストのフォントサイズ */
+  font-weight: bold; /* テキストの太さ */
+  text-align: left;
+  width : 100%;
+}
+.food-preference {
+  font-size: 14px;
+  font-weight: bold;
+}
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-images {
+  display: flex;
+  justify-content: flex-start; /* 画像を中央に配置 */
+  gap: 10px; /* 画像間の隙間 */
+  width: 100%; /* テキストの幅に合わせる */
+  margin-left: 5%; /* 文章と一致するように調整 */
+}
+.small-sns-image {
+  margin-top:0px;
+  width: 50px; /* 画像の幅を50pxに設定 */
+  height: auto; /* 高さを自動調整 */
+}
+/* スマートフォン向けのスタイル */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 150px; /* スマートフォンではロゴの幅を小さくする */
+    margin-left: 5%; /* スマートフォンでは左マージンを調整 */
+    margin-top: 20%; /* 上マージンも調整 */
+  }
+
+  .logo-text {
+    font-size: 10px; /* スマートフォンではフォントサイズを小さくする */
+    margin-left: 2%; /* ロゴとの間隔を調整 */
+  }
+
+  /* レスポンシブに合わせて他の要素のスタイルも調整 */
+  .logo-and-text {
+    margin-top: 1%; /* 上マージンをさらに調整 */
+  }
+
+  .profile-name {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .food-preference {
+    font-size: 9px;
+    font-weight: bold;
+  }   
+  
+  .profile-images {
+    display: flex;
+    justify-content: flex-start; /* 画像を中央に配置 */
+    gap: 5px; /* 画像間の隙間 */
+    width: 100%; /* テキストの幅に合わせる */
+    /*margin-left: 20%; /* 文章と一致するように調整 */
+  }
+  .small-sns-image {
+    margin-top:0px;
+    width: 30px; /* 画像の幅を50pxに設定 */
+    height: auto; /* 高さを自動調整 */
+  }
+}
+
+/*以下はテキストボックスを表示する部分*/
+.container {
+  /*width: 100%; /* 箱の幅 これは入力文字数に対して可変にしたい？*/
+  padding: 20px; /* 箱内の余白 */
+  box-sizing: border-box; /* 箱の境界線を含めたサイズ指定 */
+  margin-bottom: 10px;/*他の要素と接しないように幅とってある*/
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 70%; /* 横幅を広げる */
+    font-size: 0.7em;
+    padding: 0px;
+  }
+}
+.LINKS {
+  margin-top: 10%;
+  color: rgb(212, 200, 192);
+}
+.container p {
+  margin: 0; /* 文章の上下の余白を除去 これのおかげで多少すっきり詰まって見えてる*/
+}
+/*線分表示。長さ色は取りあえず*/
+.line {
+  border-top: 2px dashed;
+  color: rgb(238, 220, 179);
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+.sns-images {
+  display: flex;
+  justify-content: space-between; /* 画像間に均等なスペースを設ける */
+  margin: 20px auto; /* 上下のマージンを設定し、左右は自動で中央揃え */
+  /*max-width: 400px; /* コンテナの最大幅を指定 */
+}

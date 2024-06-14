@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Gallery</title>
+<meta name="viewport" content="width=device-width,initial-scale=0.9">
+
+<link rel="stylesheet" href="/default.css">
+<link rel="stylesheet" type="text/css" href="/gallery_style.css">
+
+<link rel="shortcut icon" href="/fabicon.png">
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="/gallery_script.js"></script>
+<script src="/header.js" defer></script>
+<script src="/putHeader.js"></script>
+
+</head>
+
+<body>
+  <div id="headerArea"></div>
+  <script>
+    $(document).ready(function() {
+      $("#headerArea").load("/header.html");
+    });
+  </script>
+  <div id="overlay"></div>
+  
+  <div class="image-list">
+    <ul class="gallery" id="gallery">
+      <% @images.each do |image| %>
+        <li class="image-item">
+        <img src="<%= image.image_path.sub('/home/kobamasa/my_html/public', '') %>" loading="lazy" alt="Image">
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  
+  <div id="selected-image-container">
+    <img id="selected-image" src="" alt="Selected Image">
+    <div id="image-info">
+      <h2 id="title"></h2>
+      <p id="text"></p>
+    </div>
+  </div>
+
+</body>
+</html>

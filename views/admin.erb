@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Admin Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=0.9">
+<link rel="stylesheet" href="/default.css">
+<link rel="stylesheet" type="text/css" href="/admin_style.css">
+</head>
+<body>
+  <div id="headerArea"></div>
+  <h1>Admin Page</h1>
+
+  <h2>Images</h2>
+  <div class="image-list">
+    <ul class="gallery">
+      <% @images.each do |image| %>
+        <li class="image-item">
+          <img src="<%= image.image_path.sub('/home/kobamasa/my_html/public', '') %>" loading="lazy" alt="Image">
+          <p><%= File.basename(image.image_path) %></p> <!-- ファイル名を表示 -->
+          <form action="/admin/delete" method="post" style="display:inline;">
+            <input type="hidden" name="id" value="<%= image.id %>">
+            <button type="submit">Delete</button>
+          </form>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <h2>Upload New Image</h2>
+  <form action="/admin/add" method="post" enctype="multipart/form-data">
+    <label for="image_file">Select Image:</label>
+    <input type="file" name="image_file" id="image_file" required>
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
